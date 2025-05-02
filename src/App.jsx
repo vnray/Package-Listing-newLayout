@@ -8,23 +8,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import CityDetail from "./components/CityDetails";
 
-
-
 function App() {
   return (
     <>
-      <Router basename="/Package-Listing-mob">
+      <Router basename="/Package-Listing-newLayout">
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} /> || <Route path="Package-Listing" element={<Home/>}/>
+            <Route path="/" element={<Home />} /> ||{" "}
+            <Route path="Package-Listing" element={<Home />} />
             <Route
               path="/state/:stateName"
               element={<CityList data={data} />}
-              />
-            
-            <Route path="/state/:stateName/:cityName" element={<CityDetail data={data} />} />
-
-          
+            />
+            <Route
+              path="/state/:stateName/:cityName"
+              element={<CityDetail data={data} />}
+            />
           </Routes>
         </Layout>
       </Router>
